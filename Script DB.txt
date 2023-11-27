@@ -1,0 +1,41 @@
+-- Crea la base de datos
+CREATE DATABASE SistemaDeParqueos;
+
+-- Cambia al contexto de la nueva base de datos
+USE SistemaDeParqueos;
+
+-- Crear la tabla Empleado
+CREATE TABLE Empleado (
+    Id INT IDENTITY(1,1) PRIMARY KEY, -- Id con autoincremento
+    Parqueo INT,
+    FechaIngreso DATE,
+    Nombre VARCHAR(255),
+    Apellidos VARCHAR(255),
+    FechaDeNacimiento DATE,
+    Cedula BIGINT,
+    Direccion VARCHAR(255),
+    Email VARCHAR(255),
+    Telefono INT,
+    PersonaDeContacto VARCHAR(255)
+);
+
+-- Crear la tabla Parqueo
+CREATE TABLE Parqueo (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(255),
+    CapacidadMaxima INT,
+    HoraApertura TIME,
+    HoraCierre TIME
+);
+
+-- Crear la tabla Tiquete
+CREATE TABLE Tiquete (
+    Id INT IDENTITY(1,1) PRIMARY KEY, -- Id con autoincremento
+    Parqueo INT,
+    FechaYHoraEntrada DATETIME,
+    FechaYHoraSalida DATETIME,
+    Placa VARCHAR(20),
+    TarifaPorHora FLOAT,
+    TarifaPorMediaHora FLOAT
+);
+
