@@ -43,7 +43,7 @@ CREATE TABLE Tiquete (
 -- Insertar un empleado por default
 INSERT INTO Empleado (Parqueo, FechaIngreso, Nombre, Apellidos, FechaDeNacimiento, Cedula, Direccion, Email, Telefono, PersonaDeContacto)
 VALUES 
-(1, '2023-11-26', 'Juan', 'PÃ©rez', '1990-05-15', 12345678901, 'Calle 123, Ciudad', 'juan.perez@email.com', 123456789, 'Maria GÃ³mez');
+(1, '2023-11-26', 'Juan', 'Pérez', '1990-05-15', 12345678901, 'Calle 123, Ciudad', 'juan.perez@email.com', 123456789, 'Maria Gómez');
 
 -- Insertar un parqueo por default
 INSERT INTO Parqueo (Nombre, CapacidadMaxima, HoraApertura, HoraCierre)
